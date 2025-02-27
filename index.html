@@ -1,4 +1,228 @@
-<html>
-  <h1> hello ,this is our first repository..</h1>
-   <h1> hello ,this is our first repository..</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids Learning Fun | Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #b3e5fc, #f0f4c3);
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background-color: #FFD700;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 2rem;
+            color: #FF4081;
+            font-weight: bold;
+            text-shadow: 2px 2px #fff;
+        }
+
+        .nav-items {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .dropdown {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            padding: 1rem;
+            top: 100%;
+            left: 0;
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #333;
+            padding: 0.5rem;
+            text-decoration: none;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f5f5f5;
+            transform: translateX(5px);
+        }
+
+        .login-btn {
+            background-color: #FF4081;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .login-btn:hover {
+            transform: scale(1.05);
+            background-color: #FF1493;
+        }
+
+        /* Login Modal */
+        .login-modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+
+        .login-form input {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            margin: 1rem 0;
+            border: 2px solid #FFD700;
+            border-radius: 15px;
+        }
+
+        .welcome-section {
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .welcome-section h1 {
+            color: #FF4081;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .animal-icons {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .animal-icons img {
+            width: 100px;
+            height: 100px;
+            transition: transform 0.3s;
+        }
+
+        .animal-icons img:hover {
+            transform: scale(1.1) rotate(10deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">KiddoLearn</div>
+        <div class="nav-items">
+            <div class="dropdown">
+                Home
+                <div class="dropdown-content">
+                    <a href="#">Dashboard</a>
+                    <a href="#">Progress</a>
+                    <a href="#">Achievements</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                Quiz
+                <div class="dropdown-content">
+                    <a href="#">Math Quiz</a>
+                    <a href="#">ABC Quiz</a>
+                    <a href="#">Colors Quiz</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                Games
+                <div class="dropdown-content">
+                    <a href="#">Puzzle</a>
+                    <a href="#">Memory Game</a>
+                    <a href="#">Matching Pairs</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                Classes
+                <div class="dropdown-content">
+                    <a href="#">Live Sessions</a>
+                    <a href="#">Recorded Lessons</a>
+                    <a href="#">Story Time</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                Profile
+                <div class="dropdown-content">
+                    <a href="#">My Account</a>
+                    <a href="#">Settings</a>
+                    <a href="#">Logout</a>
+                </div>
+            </div>
+        </div>
+        <button class="login-btn" onclick="openLogin()"><i class="fas fa-user"></i> Login</button>
+    </nav>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="login-modal">
+        <h2>Welcome Back! 👋</h2>
+        <form class="login-form">
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit" class="login-btn">Sign In</button>
+        </form>
+    </div>
+
+    <!-- Main Content -->
+    <div class="welcome-section">
+        <h1>Welcome to KiddoLearn! 🎉</h1>
+        <p>Where Learning Meets Fun! 🌈</p>
+        <div class="animal-icons">
+            <img src="https://img.icons8.com/color/96/000000/lion.png" alt="Lion">
+            <img src="https://img.icons8.com/color/96/000000/elephant.png" alt="Elephant">
+            <img src="https://img.icons8.com/color/96/000000/monkey.png" alt="Monkey">
+        </div>
+    </div>
+
+    <script>
+        // Login Modal Functions
+        function openLogin() {
+            document.getElementById('loginModal').style.display = 'block';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('loginModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
 </html>
