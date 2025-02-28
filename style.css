@@ -1,4 +1,4 @@
-<style>
+
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +14,7 @@ body {
 .navbar {
     background-color: #FFD700;
     padding: 1rem 2rem;
-    display: flex;
+    display: fle
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -132,4 +132,3 @@ body {
 .animal-icons img:hover {
     transform: scale(1.1) rotate(10deg);
 }
-</style>
